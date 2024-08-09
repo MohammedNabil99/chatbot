@@ -77,6 +77,7 @@ export default function Home() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
+      p={2}
     >
       <Typography
         variant="h4"
@@ -84,16 +85,22 @@ export default function Home() {
         align="center"
         p={1}
         color="orange"
+        sx={{ fontSize: { xs: "1.5rem", md: "2rem" } }}
       >
         Brakes Plus Virtual Assistant
       </Typography>
       <Stack
         direction="column"
-        width="600px"
-        height="650px"
+        width={{ xs: "100%", sm: "90%", md: "600px" }}
+        height={{ xs: "80vh", md: "650px" }}
         border="1px solid black"
         p={2}
-        spacing={2}
+        spacing={3}
+        sx={{
+          overflowY: "auto",
+          maxHeight: { xs: "80vh", md: "650px" },
+          borderRadius: 4,
+        }}
       >
         <Stack
           direction="column"
@@ -120,6 +127,11 @@ export default function Home() {
                 color="white"
                 borderRadius={16}
                 p={3}
+                sx={{
+                  maxWidth: "80%",
+                  wordWrap: "break-word",
+                  fontSize: { xs: "0.875rem", md: "1rem" },
+                }}
               >
                 {message.content}
               </Box>
@@ -134,6 +146,7 @@ export default function Home() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
+            sx={{ fontSize: { xs: "0.875rem", md: "1rem" } }}
           />
           <Button variant="contained" onClick={sendMessage}>
             Send
