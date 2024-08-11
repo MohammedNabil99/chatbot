@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SessionWrapper from "/Users/mohammednabil/Desktop/ai-customer-support/components/SessionWrapper.tsx";
+import SessionWrapper from "../components/SessionWrapper.tsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
